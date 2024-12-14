@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangun Omah</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.min.js"></script>
+    <link href="../dist/output.css" rel="stylesheet">
+    <style>
+        /* Custom transition for the navbar */
+        .navbar {
+          background-color: 0.7s ease-in, 
+          padding 0.7s ease-in, 
+          box-shadow 0.7s ease-in, 
+          opacity 1s ease-in,
+          backdrop-filter blur(0px); 
+        }
+      </style>
+</head>
+<body class="bg-black">
+<div class="relative overflow-hidden">
+    <div class="absolute w-screen h-screen bg-gradient-to-t from-neutral-950 bg-blend-multiply top-0 left-0 z-10 border-0 display-none"></div> 
+    <img class="absolute object-cover z-0" src="bg-2.jpg">
+    <section>
+        <nav id="navbar" class="fixed px-10 py-4 w-full bg-transparent z-30">
+            <div class="flex flex-wrap items-center lg:justify-start md:justify-start sm:justify-between min-[360px]:justify-between mt-10 p-2 gap-20">
+              <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                  <img src="Logo-White.png" class="h-8 min-[360px]:h-6" alt="BangunOmah Logo" />
+              </a>
+              <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-6 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+                  <span class="sr-only">Open main menu</span>
+                  <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 14">
+                      <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                  </svg>
+              </button>
+              <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul class="font-medium text-md flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700">
+                  <li>
+                    <a href="#" class="block text-white hover:text-blue-500" aria-current="page">Home</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block text-white hover:text-blue-500">Our Services</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block  text-white hover:text-blue-500">Projects</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block text-white hover:text-blue-500">About Us</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block text-white hover:text-blue-500">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+    </section>    
+    <section class="relative mx-10 mt-80 mb-10 min-[360px]:mt-36 lg:mt-80 z-20">
+            <div class="w-fill lg:py-16">
+                <h1 class="font-bold tracking-tight leading-none mb-8 text-4xl md:text-5xl lg:text-6xl min-[360px]:text-xl min-[640px]:text-2xl dark:text-white">Crafting Your Perfect Space. <br> Home Design & Interior Studio Services based in Surabaya.</h1>
+                <div class="flex flex-col space-y-4 sm:flex-row sm:justify-start sm:space-y-0">
+                    <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                        Our Projects
+                        <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-center py-3 px-5 sm:ms-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                        Learn more
+                    </a>  
+                </div>
+            </div>
+    </section>
+</div>
+<section class="relative w-screen h-auto py-20 dark:bg-neutral-950">
+    <h4 class="text-gray-400 font-small text-lg mx-10 mb-20">
+        At our studio, we specialize in creating personalized home designs and interiors that reflect your unique style and preferences. From concept to completion, our team of experts works closely with you to bring your vision to life, ensuring every detail is meticulously crafted to suit your lifestyle and elevate your living space.
+    </h4>
+    <div class="flex flex-col mx-10 justify-start items-center self-stretch flex-grow-0 flex-shrink-0 gap-6">
+        <div class="flex justify-between items-start self-stretch flex-grow-0 flex-shrink-0 relative">
+            <svg width="320" height="1" viewBox="0 0 320 1" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0" preserveAspectRatio="xMidYMid meet">
+            <line y1="0.5" x2="320" y2="0.5" stroke="#363636"></line>
+            </svg>
+            <svg width="320" height="1" viewBox="0 0 320 1" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0" preserveAspectRatio="xMidYMid meet">
+            <line y1="0.5" x2="320" y2="0.5" stroke="#363636"></line>
+            </svg>
+            <svg width="320" height="1" viewBox="0 0 320 1" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0" preserveAspectRatio="xMidYMid meet">
+            <line y1="0.5" x2="320" y2="0.5" stroke="#363636"></line> 
+            </svg>
+        </div>
+        <div class="flex justify-between items-start self-stretch flex-grow-0 flex-shrink-0 relative">
+          <p class="flex-grow-0 flex-shrink-0 w-80 text-left text-white">
+            <span class="flex-grow-0 flex-shrink-0 w-80 text-5xl font-semibold text-left text-white"> 10+ </span><br />
+            <span class="flex-grow-0 flex-shrink-0 w-80 text-lg text-left text-white">Years of Experience</span>
+          </p>
+          <p class="flex-grow-0 flex-shrink-0 w-80 text-left text-white">
+            <span class="flex-grow-0 flex-shrink-0 w-80 text-5xl font-semibold text-left text-white"> 200+ </span><br/>
+            <span class="flex-grow-0 flex-shrink-0 w-80 text-lg text-left text-white">Clients All over Indonesia</span>
+          </p>
+          <p class="flex-grow-0 flex-shrink-0 w-80 text-left text-white">
+            <span class="flex-grow-0 flex-shrink-0 w-80 text-5xl font-semibold text-left text-white">100% </span><br />
+            <span class="flex-grow-0 flex-shrink-0 w-80 text-lg text-left text-white">Money Guaranteed</span>
+          </p>
+        </div>
+      </div>
+</section>
+<!-- JavaScript for Scroll Animation -->
+<script>
+  const navbar = document.getElementById('navbar');
+  let isScrolled = false;
+
+  // Scroll Event Listener
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+
+    if (scrollY > 50 && !isScrolled) {
+      isScrolled = true;
+
+      // Animate Navbar on Scroll Down
+      anime({
+        targets: navbar,
+        backgroundColor: 'rgba(10, 10, 10, 0.85)', // Transparent dark (bg-gray-900)
+        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)', // Add shadow
+        backdropFilter: ['blur(0px)', 'blur(10px)'], // Add blur effect
+        opacity: 1,
+        duration: 600,
+        easing: 'easeInOutQuad',
+      });
+    } else if (scrollY <= 50 && isScrolled) {
+      isScrolled = false;
+
+      // Animate Navbar on Scroll Up
+      anime({
+        targets: navbar,
+        backgroundColor: 'rgba(0, 0, 0, 0)', // bg-transparent
+        boxShadow: '0 0 0 rgba(0, 0, 0, 0)', // Remove shadow
+        backdropFilter: ['blur(10px)', 'blur(0px)'], // Remove blur effect
+        opacity: 1,
+        duration: 600,
+        easing: 'easeInOutQuad',
+      });
+    }
+  });
+</script>
+</body>
+</html>
