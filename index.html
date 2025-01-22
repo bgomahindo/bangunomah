@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bangun Omah - Bantu Wujudkan Rumah Impian Anda</title>
+    <meta name="description" content="Buat rumah jadi lebih elegan dan nyaman hanya di Bangun Omah. Desain interior professional di Surabaya. Konsultasi gratis, yuk mulai sekarang!" />
+    <meta name="author" content="Bangun Omah">
+    <title>Bangun Omah - Bantu Wujudkan Rumah dan Hunian Impian Anda</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.min.js"></script>
     <link href="../dist/output.css" rel="stylesheet">
-    <link rel="icon" href="src/favicon-update.ico">
+    <link rel="icon" href="favicon-update.ico"/>
     <style>
         /* Custom transition for the navbar */
         .navbar {
@@ -18,99 +20,243 @@
           opacity 1s ease-in,
           backdrop-filter blur(0px); 
         }
-      </style>
+         /* Custom Keyframes for Content Shift */
+        @keyframes content-hover {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-10px);
+        }
+       }
+  
+       /* Hover Animation for Card */
+        .hover-animate-card:hover .card-content {
+         animation: content-hover 0.3s ease-in-out forwards;
+        }
+  
+        .card-image-container:hover .card-image {
+         transform: scale(1.1);
+        }
+    </style>
       <!-- Google Tag Manager -->
       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-KVZWLSN6');</script>
-        <!-- End Google Tag Manager -->
-    <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NXQJ6XCJKZ"></script>
-        <script>
+        })(window,document,'script','dataLayer','GTM-KVZWLSN6');
+      </script>  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-NXQJ6XCJKZ"></script>
+      <script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-        
           gtag('config', 'G-NXQJ6XCJKZ');
-        </script>
+      </script>
+      <!-- End Google Tag Manager -->
 </head>
+
 <body class="bg-neutral-950">
 <header class="relative overflow-hidden">
     <div class="absolute w-screen h-screen bg-gradient-to-t from-neutral-950 bg-blend-multiply top-0 left-0 z-10 border-0 display-none"></div> 
-    <img class="absolute object-cover z-0" src="src/bg-2.jpg">
+    <img class="absolute object-cover z-0" src="bg-2.jpg" alt="background-image">
+    <!-- Nav Desktop -->
     <section>
         <nav id="navbar" class="fixed px-10 py-4 w-full bg-transparent z-30">
-            <div class="flex flex-wrap items-center lg:justify-start md:justify-start sm:justify-between min-[360px]:justify-between mt-10 p-2 gap-20">
-              <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                  <img src="src/Logo-White.png" class="h-8 min-[360px]:h-6" alt="BangunOmah Logo" />
+            <div class="flex flex-wrap items-center lg:justify-start md:justify-start sm:justify-between min-[320px]:justify-between min-[360px]:justify-between mt-10 p-2 gap-20">
+              <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                  <img src="Logo-White.png" class="h-8 min-[320px]:h-5 min-[360px]:h-6" alt="bangun-omah-logo" />
               </a>
-              <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-6 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+              <button id="menuToggle" data-collapse-toggle="navbar-default" type="button" class=" inline-flex items-center p-2 w-10 h-8 justify-center text-sm text-gray-500 rounded-sm md:hidden hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
                   <span class="sr-only">Open main menu</span>
-                  <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 14">
+                  <svg id="menuIcon" class="w-6 h-6 items-center" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 14">
                       <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
                   </svg>
               </button>
               <div class="hidden w-full md:block md:w-auto" id="navbar-default">
                 <ul class="font-medium text-md flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700">
                   <li>
-                    <a href="#" class="block text-white hover:text-blue-500" aria-current="page">Home</a>
+                    <a href="#" class="block text-white hover:text-blue-500">Jasa Layanan</a>
                   </li>
                   <li>
-                    <a href="#" class="block text-white hover:text-blue-500">Our Services</a>
+                    <a href="#" class="block  text-white hover:text-blue-500">Portofolio</a>
                   </li>
                   <li>
-                    <a href="#" class="block  text-white hover:text-blue-500">Projects</a>
+                    <a href="#" class="block text-white hover:text-blue-500">Tentang Kami</a>
                   </li>
                   <li>
-                    <a href="#" class="block text-white hover:text-blue-500">About Us</a>
-                  </li>
-                  <li>
-                    <a href="#" class="block text-white hover:text-blue-500">Contact</a>
+                    <a href="#" class="block text-white hover:text-blue-500">Hubungi Kami</a>
                   </li>
                 </ul>
               </div>
             </div>
         </nav>
+
+        <!-- Nav Mobile -->
+        <div id="backdrop" class="fixed inset-0 bg-neutral-950 bg-opacity-60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 z-40"> </div>
+        <div id="rightMenu" class="fixed top-0 right-0 w-64 pt-10 h-full bg-neutral-900 text-white transform translate-x-full transition-transform duration-300 ease-in-out z-50 lg:hidden">
+          <div class="flex items-center justify-between px-8 pb-4 mb-4 border-b border-neutral-800">
+            <h4 class="text-lg font-medium">Menu</h4>
+            <button id="closeMenu" class="text-white hover:bg-neutral-600 rounded p-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col space-y-4 pl-4 pr-4 ">
+            <a href="#" class="block text-lg font-medium hover:bg-neutral-800 px-4 py-2 rounded">Jasa Layanan</a>
+            <a href="#" class="block text-lg font-medium hover:bg-neutral-800 px-4 py-2 rounded">Portofolio</a>
+            <a href="#" class="block text-lg font-medium hover:bg-neutral-800 px-4 py-2 rounded">Tentang Kami</a>
+            <a href="#" class="block text-lg font-medium hover:bg-neutral-800 px-4 py-2 rounded">Hubungi Kami</a>
+          </div>
+        </div>
+        <!-- End of Nav Mobile -->
     </section>    
-    <section class="relative mx-10 mt-80 mb-10 min-[360px]:mt-36 lg:mt-80 z-20">
+    <!-- Hero -->
+    <section class="relative mx-10 mt-80 mb-4 min-[320px]:mt-36 min-[360px]:mt-36 lg:mt-80 z-20">
             <div class="w-fill lg:py-16">
-                <h1 class="font-bold tracking-tight leading-none mb-8 text-4xl md:text-5xl lg:text-6xl min-[360px]:text-xl min-[640px]:text-2xl text-white">Crafting Your Perfect Space. <br> Home Design & Interior Studio Services based in Surabaya.</h1>
-                <div class="flex flex-col space-y-4 sm:flex-row sm:justify-start sm:space-y-0">
-                    <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
-                        Our Projects
-                        <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="text-center py-3 px-5 sm:ms-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
-                        Learn more
+                <h1 class="font-bold tracking-normal leading-none mb-8 text-4xl md:text-4xl lg:text-6xl min-[320px]:text-xl min-[360px]:text-xl min-[640px]:text-2xl text-white">
+                  Wujudkan Rumah dan Hunian Impian Anda dengan Layanan Desain Interior Profesional Terbaik di Surabaya.
+                </h1>
+                <div class="flex flex-col space-y-4 sm:flex-row sm:justify-start sm:space-y-0 ">
+                    <a href="http://wa.me/+6282220060088" class="inline-flex justify-center items-center 
+                    text-center py-3 px-5 text-base font-medium 
+                    rounded-lg text-white bg-green-600 hover:bg-green-500 focus:ring-2 focus:ring-green-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 48 48">
+                      <path fill="#fff" d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"></path><path fill="#fff" d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"></path><path fill="#cfd8dc" d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"></path><path fill="#40c351" d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"></path><path fill="#fff" fill-rule="evenodd" d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z" clip-rule="evenodd"></path>
+                      </svg>
+                      &nbsp;
+                        Konsultasi gratis
                     </a>  
+                    <a href="#" class="text-center py-3 px-5 sm:ms-4 text-base font-medium rounded-lg focus:outline-none text-gray-200  bg-neutral-900 hover:bg-neutral-800 border border-neutral-600 focus:z-10 focus:ring-2 focus:ring-neutral-100">
+                      Portofolio pekerjaan
+                  </a> 
                 </div>
             </div>
     </section>
 </header>
-<section class="relative w-auto h-auto py-20 dark:bg-neutral-950">
-    <h4 class="text-gray-400 font-small text-lg mx-10 mb-14">
-        At our studio, we specialize in creating personalized home designs and interiors that reflect your unique style and preferences. From concept to completion, our team of experts works closely with you to bring your vision to life, ensuring every detail is meticulously crafted to suit your lifestyle and elevate your living space.
+
+<!-- Highlight and Desc -->
+<section class="relative w-auto h-auto py-20 bg-neutral-950 border-b border-neutral-800">
+    <h4 class="text-gray-300 font-light tracking-normal text-lg mx-10 mb-14">
+      Studio kami hadir untuk membantu menciptakan rumah yang nyaman dan penuh karakter, 
+      mencerminkan gaya serta kepribadian unik Anda. 
+      Mulai dari perencanaan hingga eksekusi, 
+      tim profesional kami berkolaborasi menghadirkan desain interior yang punya estetika dan fungsional sesuai dengan kebutuhan Anda, 
+      menjadikan setiap sudut rumah terasa istimewa dan bermakna.
     </h4>
     <div class="flex flex-col min-[480px]:flex-row mx-10 items-left gap-6 justify-between relative">
-          <div class="w-auto text-left text-white">
-            <p class="text-5xl font-semibold mb-2"> 10+ </p>
-            <p class="text-lg">Years of Experience</p>
-          </div>
-          <p class="w-auto text-left text-white">
-            <span class="text-5xl font-semibold"> 200+ </span><br/>
-            <span class="text-lg">Clients All over Indonesia</span>
+          <p class="w-96 max-[480px]:w-auto text-left text-white">
+            <span class="min-[320px]:text-4xl min-[480px]:text-4xl  min-[560px]:text-5xl font-extrabold"> 10+ </span><br/>
+            <span class="text-lg font-light text-gray-300">Tahun Pengalaman</span>
           </p>
-          <p class="w-auto text-left text-white">
-            <span class="text-5xl font-semibold">100% </span><br />
-            <span class="text-lg">Money Guaranteed</span>
+          <p class="w-96 max-[480px]:w-auto text-left text-white">
+            <span class="min-[320px]:text-4xl min-[480px]:text-4xl  min-[560px]:text-5xl font-extrabold"> 200+ </span><br/>
+            <span class="text-lg font-light text-gray-300">Klien di Indonesia</span>
+          </p>
+          <p class="w-96 max-[480px]:w-auto text-left text-white">
+            <span class="min-[320px]:text-4xl min-[480px]:text-4xl  min-[560px]:text-5xl  font-extrabold">100% </span><br />
+            <span class="text-lg font-light text-gray-300">Garansi Pekerjaan</span>
           </p>
       </div>
 </section>
-<!-- JavaScript for Scroll Animation -->
+
+<!-- Our Services -->
+<section class="py-20 bg-neutral-950">
+ 
+  <div class="flex flex-row px-10 mb-8 min-[320px]:flex-col min-[480px]:flex-row justify-between items-start">
+    <p class="flex-grow min-[768px]:text-3xl min-[560px]:text-2xl min-[320px]:text-xl font-semibold text-left text-white">Temukan jasa layanan yang Anda butuhkan</p>
+    <!-- <button href="#" class="inline-flex flex-shrink-0 items-center px-6 py-3 text-sm text-gray-200 border border-neutral-600 hover:bg-neutral-800 rounded-full">
+      Lihat semua
+      <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+    </svg>
+    </button>
+  -->
+  </div>
+  
+  <section class="px-10">
+    <div class="">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Card -->
+        <div class="bg-neutral-900 shadow-lg rounded-lg border border-neutral-800 overflow-hidden transform hover:scale-105 transition-transform duration-300">
+          <div class="relative overflow-hidden card-image-container">
+            <!-- Image -->
+            <img 
+              src="services-bangun-omah3.webp" 
+              alt="Desain Arsitektur" 
+              class="w-full h-96 object-cover transition-transform duration-500 ease-in-out card-image"
+              loading="lazy">
+          </div>
+          <!-- Content -->
+          <div class="p-6">
+            <div class="inline-flex gap-4">
+              <img src="icon-home.svg" class=""></img>
+              <h3 class="text-xl font-semibold text-white">
+                Desain Arsitektur
+              </h3>
+            </div>
+            <p class="text-sm font-light text-neutral-400 mt-2">
+              Rancang hunian impian Anda dengan layanan arsitektur profesional Bangun Omah. Dari mulai jasa desain hingga implementasi pembangunan yang disesuaikan dengan kebutuhan Anda.
+            </p>
+           
+          </div>
+        </div>
+        <div class="bg-neutral-900 shadow-lg rounded-lg border border-neutral-800 overflow-hidden transform hover:scale-105 transition-transform duration-300">
+          <div class="relative overflow-hidden card-image-container">
+            <!-- Image -->
+            <img 
+              src="services-bangun-omah1.webp" 
+              alt="Desain Arsitektur" 
+              class="w-full h-96 object-cover transition-transform duration-500 ease-in-out card-image"
+              loading="lazy">
+          </div>
+          <!-- Content -->
+          <div class="p-6">
+            <div class="inline-flex gap-4">
+              <img src="icon-interior.svg" class=""></img>
+              <h3 class="text-xl font-semibold text-white">
+                Desain Interior
+              </h3>
+            </div>
+            <p class="text-sm font-light text-neutral-400 mt-2">
+              Transformasi ruangan Anda dengan layanan interior profesional Bangun Omah, menghadirkan interior unik yang mencerminkan selera, gaya hidup, dan kepribadian Anda. 
+            </p>
+            
+          </div>
+        </div>
+        <div class="bg-neutral-900 shadow-lg rounded-lg border border-neutral-800 overflow-hidden transform hover:scale-105 transition-transform duration-300">
+          <div class="relative overflow-hidden card-image-container">
+            <!-- Image -->
+            <img 
+              src="services-bangun-omah2.webp" 
+              alt="Desain Arsitektur" 
+              class="w-full h-96 object-cover transition-transform duration-500 ease-in-out card-image"
+              loading="lazy">
+          </div>
+          <!-- Content -->
+          <div class="p-6">
+            <div class="inline-flex gap-4">
+              <img src="icon-exterior.svg" class=""></img>
+              <h3 class="text-xl font-semibold text-white">
+                Desain Eksterior
+              </h3>
+            </div>
+            <p class="text-sm font-light text-neutral-400 mt-2">
+              Meningkatkan keindahan dan daya tarik rumah Anda dengan layanan eksterior profesional Bangun Omah. Kami menciptakan desain eksterior yang memukau dan berkesan, yang memperkuat estetika tampilan luar rumah Anda.
+
+            </p>
+          
+          </div>
+        </div>
+      <div>
+    </div>
+</section>
+
+<!-- Our Portofolio -->
+
+<!--Scroll Menu Animation -->
 <script>
   const navbar = document.getElementById('navbar');
   let isScrolled = false;
@@ -147,6 +293,39 @@
       });
     }
   });
+</script>
+<!--Side Menu Animation -->
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const backdrop = document.getElementById('backdrop');
+  const rightMenu = document.getElementById('rightMenu');
+  const closeMenu = document.getElementById('closeMenu');
+  const menuIcon = document.getElementById('menuIcon');
+
+ // Function to open menu
+  const openMenu = () => {
+      rightMenu.classList.remove('translate-x-full');
+      backdrop.classList.remove('hidden'); // Immediately show the backdrop
+      setTimeout(() => {
+        backdrop.classList.remove('opacity-0');
+        backdrop.classList.add('opacity-100');
+      }, 10); // Delay ensures transition works
+      menuIcon.classList.add('hidden');
+    };
+
+    const closeMenuFn = () => {
+      rightMenu.classList.add('translate-x-full');
+      backdrop.classList.remove('opacity-100');
+      backdrop.classList.add('opacity-0');
+      setTimeout(() => {
+        backdrop.classList.add('hidden'); // Hide after animation ends
+      }, 300); // Match transition duration
+      menuIcon.classList.remove('hidden');
+    };
+
+    menuToggle.addEventListener('click', openMenu);
+    closeMenu.addEventListener('click', closeMenuFn);
+    backdrop.addEventListener('click', closeMenuFn);
 </script>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVZWLSN6"
